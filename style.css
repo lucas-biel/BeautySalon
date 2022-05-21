@@ -67,8 +67,17 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(var(--hue), 36%, 57%, 1) 0%,
-    hsla(var(--hue), 65%, 88%, 0.34) 100%
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
   );
 }
 
@@ -84,6 +93,10 @@ body {
 
 .section {
   padding: 5rem 0;
+}
+
+.section .title {
+  margin-bottom: 1rem;
 }
 
 #header {
@@ -247,4 +260,42 @@ nav.show div.icon-close {
 #home .text p {
   margin-bottom: 2rem;
   max-width: 100%;
+}
+
+/* =========== ABOUT ===========*/
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
+#about .image::before,
+#about .image img {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-inline: 1.5rem;
 }
