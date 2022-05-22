@@ -28,3 +28,13 @@ window.addEventListener('scroll', function() {
     header.classList.remove('scroll')
   }
 })
+
+/* ========== testimonials carousel ==========*/
+const swiper = new Swiper('.swiper-container', {
+  slidesPerview: 1,  //quantos slides aparecem
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,  //passar com o scroll do mouse
+  keyboard: true  //passar com as "setas" do teclado
+})
