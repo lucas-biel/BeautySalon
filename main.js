@@ -1,4 +1,4 @@
-/* ========== abre e facha o menu ==========*/
+// ========== abre e facha o menu ==========
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -8,7 +8,7 @@ for (const element of toggle) {
   })
 }
 
-/* ========== esconder o menu ==========*/
+// ========== esconder o menu ==========
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
@@ -17,7 +17,7 @@ for (const link of links) {
   })
 }
 
-/* ========== sombrear o header ==========*/
+// ========== sombrear o header ==========
 const header = document.querySelector('#header')
 const navHeight =header.offsetHeight
 
@@ -29,7 +29,7 @@ window.addEventListener('scroll', function() {
   }
 })
 
-/* ========== testimonials carousel ==========*/
+// ========== testimonials carousel ==========
 const swiper = new Swiper('.swiper-container', {
   slidesPerview: 1,  //quantos slides aparecem
   pagination: {
@@ -39,7 +39,7 @@ const swiper = new Swiper('.swiper-container', {
   keyboard: true  //passar com as "setas" do teclado
 })
 
-/* ========== mostrar elementos quando der scroll na página ==========*/
+// ========== mostrar elementos quando der scroll na página ==========
 const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
@@ -56,3 +56,13 @@ scrollReveal.reveal(
   `,
   { interval: 100 }
   )
+
+// botão voltar para o topo
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function() {
+  if (this.window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})
