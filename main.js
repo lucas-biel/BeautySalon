@@ -31,12 +31,18 @@ function changeHeaderWhenScroll() {
 
 // ========== testimonials carousel ==========
 const swiper = new Swiper('.swiper-container', {
-  slidesPerview: 1,  //quantos slides aparecem
+  slidesPerView: 1,  //quantos slides aparecem
   pagination: {
     el: '.swiper-pagination'
   },
   mousewheel: true,  //passar com o scroll do mouse
-  keyboard: true  //passar com as "setas" do teclado
+  keyboard: true,  //passar com as "setas" do teclado
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 // ========== mostrar elementos quando der scroll na página ==========
